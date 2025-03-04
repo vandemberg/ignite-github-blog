@@ -1,22 +1,27 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+  :root {
+    font-size: 20px;
+  }
   * {
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: 'Nunito', sans-serif;
   }
 
-  input,textarea, body {
-    font-family: 'Nunito', sans-serif;
-    font-size: 1rem;
-    color: ${({ theme }) => theme["base-text"]};
+  input:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px ${(props) => props.theme["green-500"]};
   }
 
-  ${({ theme }) => `
-    body {
-      background-color: ${theme["base-background"]};
-    }
-  `}
-`
+  body {
+    background-color: ${(props) => props.theme["base-background"]};
+    color: ${(props) => props.theme["base-text"]};
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body, input, textarea, button {
+    font: 400 20px Roboto, sans-serif;
+  }
+`;

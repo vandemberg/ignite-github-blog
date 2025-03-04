@@ -6,7 +6,12 @@ export const HeaderContainer = styled.header`
 
   img {
     width: 100%;
-    height: auto;
     object-fit: cover;
   }
-`
+`;
+
+export const MainContainer = styled.main`
+  margin-top: -8rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
+`;

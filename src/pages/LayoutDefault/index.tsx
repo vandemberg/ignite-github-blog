@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import cover from "../../assets/images/cover.png";
-import { HeaderContainer } from "./styles";
+import { HeaderContainer, MainContainer } from "./styles";
 
 export function LayoutDefault() {
   return (
@@ -8,7 +8,10 @@ export function LayoutDefault() {
       <HeaderContainer>
         <img src={cover} />
       </HeaderContainer>
-     <Outlet />
+
+      <MainContainer>
+        <Outlet />
+      </MainContainer>
     </>
-  )
+  );
 }
